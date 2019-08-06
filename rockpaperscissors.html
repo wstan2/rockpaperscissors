@@ -10,9 +10,9 @@
 			let compWins = 0;
 
 			let computerPlay = num => {
-				if (compNum == 1) {
+				if (num == 1) {
 					return "rock";
-				} else if (compNum == 2) {
+				} else if (num == 2) {
 					return "paper";
 				} else return "scissors";
 			};
@@ -44,8 +44,6 @@
 					let compTurn = computerPlay(compNum);
 
 					let result = playRound(playerTurn, compTurn);
-
-					alert(result);
 
 					alert("Player: " + playerWins + " Computer: " + compWins);
 				}
