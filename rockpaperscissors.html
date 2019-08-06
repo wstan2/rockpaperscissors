@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Page Title</title>
+	</head>
+	<body>
+		<script>
+
+		let playerTurn = prompt("Rock, Paper, or Scissors?");
+
+		let compNum = Math.floor(Math.random() * 3);
+
+		let compTurn = computerPlay(compNum);
+
+		console.log(compTurn);
+		
+		function computerPlay(num) {
+			if (compNum == 0) {
+				return "rock";
+			}
+			else if (compNum == 1) {
+				return "paper";
+			}
+			else return "scissors";
+		}
+
+		function playRound(playerTurn, compTurn) {
+
+			let playerTurn2 = playerTurn.toLowerCase(); 
+
+			if (playerTurn2 == "rock" && compTurn == "scissors") {
+				return "You Win, " + playerTurn + " beats " + compTurn;
+			}
+			else if (playerTurn2 == "paper" && compTurn == "rock") {
+				return "You Win, " + playerTurn + " beats " + compTurn;
+			}
+			else if (playerTurn2 == "scissors" && compTurn == "paper") {
+				return "You Win, " + playerTurn + " beats " + compTurn;
+		    }
+			else if (playerTurn == compTurn) {
+				return "TIE!"
+			}
+			else return "You Lose!";
+		}
+
+			let result = playRound(playerTurn, compTurn);
+
+			alert(result);
+		</script>
+	</body>
+</html>
