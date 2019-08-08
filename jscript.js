@@ -56,7 +56,6 @@ let game = e => {
 };
 
 while (playerWins < 5 || compWins < 5) {
-	div.textContent = "Player: wins";
 	const buttons = document.querySelectorAll("button");
 
 	buttons.forEach(button => {
