@@ -49,8 +49,6 @@ let game = e => {
 	let result = playRound(playerTurn, compTurn);
 };
 
-const div = document.createElement("div");
-
 while (playerWins < 5 || compWins < 5) {
 	div.textContent = "Player: wins";
 	const buttons = document.querySelectorAll("button");
