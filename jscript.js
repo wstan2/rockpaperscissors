@@ -37,10 +37,15 @@ const playRound = (playerTurn, compTurn) => {
 
 	comp.innerHTML = `The computer chose ${compTurn}.`;
 	final.innerHTML = `Player: ${playerWins} Computer: ${compWins}`;
+
+	if (playerWins == 5) {
+		final.innerHTML = "You are the winner!!";
+	} else if (compWins == 5) {
+		final.innerHTML = "The computer wins!!";
+	}
 };
 
 let game = e => {
-	//	for (let i = 0; i < 5; i++) {
 	let playerTurn = e.target.textContent;
 
 	let compNum = Math.floor(Math.random() * 3) + 1;
