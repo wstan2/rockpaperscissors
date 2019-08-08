@@ -4,6 +4,7 @@ let compWins = 0;
 let compTurn;
 let playerTurn;
 
+const div = document.createElement("div");
 let compare = document.querySelector("#compare");
 let final = document.querySelector("#final");
 let comp = document.querySelector("#compChoice");
